@@ -1,22 +1,58 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web.
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Badges
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/:user)
 
+
+# Composebook 🪄
+
+This is a **Kotlin Multiplatform project** targeting Android, iOS, Web.
+
+[Jetpack Compose Multiplatform](https://www.jetbrains.com/fr-fr/lp/compose-multiplatform/) let us share compose components between mutliples targets such as Android, iOS, Desktop, etc... The new target WASM allow us to now share our component to the web!
+
+**Composebook** is a proof of concept that show how you can use jetpack compose multiplatform to create a **shared component library** for **Android and iOS** while letting you share this library to our beloved designers, collegues etc with **just a [link](https://gosunet.github.io/composebook/)**. 
+Removing the need to install an app to see those components! A bit like **a storybook for native app** 🙌
+
+
+
+## Demo
+
+https://gosunet.github.io/composebook/
+
+
+## Run Locally
+
+Clone the project
+
+### Run your application on browser
+
+You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+
+
+### Run your application on Android
+
+- Create an Android virtual device.
+- In the list of run configurations, select **composeApp**.
+- Choose your Android virtual device and click **Run**.
+
+### Run your application on iOS
+
+- Launch Xcode in a separate window. The first time, you may also need to accept its license terms and allow it to perform some necessary initial tasks.
+- In the list of run configurations, select **iosApp** and click **Run**.
+- If you don't have an available iOS configuration in the list, add a new iOS simulated device.
+## Authors
+
+- [@Gosunet](https://www.github.com/Gosunet)
+
+
+## Contributing
+
+Contributions are always welcome!
+
+## Appendix
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
 [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
 [Kotlin/Wasm](https://kotl.in/wasm/)…
 
-**Note:** Compose/Web is Experimental and may be changed at any time. Use it only for evaluation purposes.
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
-
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
