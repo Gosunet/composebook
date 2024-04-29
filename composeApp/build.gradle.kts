@@ -50,8 +50,10 @@ kotlin {
             implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.material3)
-            @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+            implementation(libs.compose.navigation)
+            implementation(libs.kodein.emoji)
+            implementation(libs.kodein.emoji.compose)
         }
     }
 }
