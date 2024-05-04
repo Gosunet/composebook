@@ -11,7 +11,7 @@ This is a **Kotlin Multiplatform project** targeting Android, iOS, Web.
 
 [Compose Multiplatform](https://www.jetbrains.com/fr-fr/lp/compose-multiplatform/) let us share compose components between mutliples targets such as Android, iOS, Desktop, etc... The new target WASM allow us to now share our component to the web!
 
-**Composebook** is a proof of concept that show how you can use Compose multiplatform to create a **shared component library** for **Android and iOS** while letting you share this library to our beloved designers, colleagues etc with **just a [link](https://composebook.vercel.app/)**. 
+**Composebook** is a proof of concept that show how you can use Compose multiplatform to create a **shared component library** for **Android and iOS** while letting you share this library to our beloved designers, colleagues etc with **just a [link](https://gosunet.github.io/composebook/)**. 
 Removing the need to install an app to see those components! A bit like **a storybook for native app** 🙌
 
 
