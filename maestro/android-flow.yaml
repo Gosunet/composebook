@@ -1,0 +1,11 @@
+appId: com.gosunet.composebook
+tags:
+  - android
+  - passing
+---
+- launchApp
+- tapOn: "🧱 Components"
+- tapOn: "Filter chip"
+- swipe:
+    direction: RIGHT
+- tapOn: "👋 About"
