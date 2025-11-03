@@ -15,13 +15,20 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
 
 @Composable
-internal fun CircularButton(image: Painter, onClick: () -> Unit) {
+internal fun CircularButton(
+    modifier: Modifier = Modifier,
+    painterProvider: @Composable () -> Painter,
+    onClick: () -> Unit,
+) {
     Box(
-        Modifier.size(40.dp).clip(CircleShape).background(Color(25, 25, 28, 180))
+        modifier
+            .size(40.dp)
+            .clip(CircleShape)
+            .background(Color(25, 25, 28, 180))
             .clickable { onClick() }, contentAlignment = Alignment.Center
     ) {
         Image(
-            image,
+            painter = painterProvider(),
             contentDescription = null,
             modifier = Modifier.size(20.dp)
         )

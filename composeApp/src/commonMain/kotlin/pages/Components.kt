@@ -54,8 +54,8 @@ fun Components() {
             title = "Icon buttons",
             description = "Behold the mystical prowess of icon buttons, granting individuals the power to enact minor wonders with a mere touch – a spellbinding experience at the tip of your fingers."
         ) {
-            CircularButton(painterResource(Res.drawable.magic)) { }
-            CircularButton(painterResource(Res.drawable.plus)) { }
+            CircularButton(painterProvider = { painterResource(Res.drawable.magic) }) { }
+            CircularButton(painterProvider = { painterResource(Res.drawable.plus) }) { }
         }
         ComponentsBlock(
             title = "Chips",
