@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import components.AssistChip
 import components.CircularButton
+import components.ConditionalWebView
 import components.FilterChipExample
 import components.RangeSlider
 import components.SliderMinimal
@@ -79,5 +80,6 @@ fun Components() {
                 RangeSlider()
             }
         }
+        ConditionalWebView()
     }
 }

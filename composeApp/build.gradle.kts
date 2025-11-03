@@ -47,6 +47,7 @@ kotlin {
             implementation(libs.compose.navigation)
             implementation(libs.kodein.emoji)
             implementation(libs.kodein.emoji.compose)
+            implementation(libs.compose.webview)
         }
     }
 }

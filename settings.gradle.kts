@@ -7,6 +7,7 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
+        maven("https://jogamp.org/deployment/maven")
     }
 }
 

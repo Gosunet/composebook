@@ -4,7 +4,7 @@ android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
 androidx-activityCompose = "1.11.0"
-compose = "1.9.1"
+compose = "1.9.2"
 compose-ui = "1.9.4"
 kotlin = "2.2.21"
 
@@ -15,6 +15,7 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-ui" }
 compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version = "2.9.1" }
+compose-webview = { module = "io.github.kevinnzou:compose-webview-multiplatform", version = "2.0.3"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
