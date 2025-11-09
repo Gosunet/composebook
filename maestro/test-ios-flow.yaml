@@ -1,0 +1,7 @@
+appId: com.apple.Fitness
+tags:
+  - ios
+  - passing
+---
+- launchApp
+- tapOn: "Workout"
