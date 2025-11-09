@@ -12,8 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.delay
-import kotlin.math.pow
-import kotlin.math.roundToInt
+import utils.formatDecimal
 import kotlin.random.Random
 
 
@@ -54,9 +53,4 @@ fun RealtimePriceIndicator() { // only exist for demo purposes
     Column {
         PriceIndicator(randomPrice)
     }
-}
-
-private fun Double.formatDecimal(digits: Int): String {
-    val factor = 10.0.pow(digits)
-    return ((this * factor).roundToInt() / factor).toString()
 }

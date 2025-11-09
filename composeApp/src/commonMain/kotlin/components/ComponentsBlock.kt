@@ -1,4 +1,4 @@
-package pages
+package components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

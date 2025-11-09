@@ -3,10 +3,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import pages.About
-import pages.Components
-import pages.Home
-import pages.Styles
+import screens.About
+import screens.Components
+import screens.Home
+import screens.Styles
 
 @Composable
 fun Content(navController: NavHostController) {

@@ -18,7 +18,9 @@ kotlin {
     }
 
     androidTarget {}
-    
+
+    jvm("desktop")
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -29,25 +31,34 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
-        
-        androidMain.dependencies {
-            implementation(libs.compose.ui.tooling.preview)
-            implementation(libs.androidx.activity.compose)
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.compose.ui.tooling.preview)
+                implementation(libs.androidx.activity.compose)
+            }
         }
-        commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.materialIconsExtended)
-            implementation(compose.ui)
-            implementation(compose.material3)
-            implementation(compose.components.resources)
-            implementation(libs.compose.navigation)
-            implementation(libs.kodein.emoji)
-            implementation(libs.kodein.emoji.compose)
-            implementation(libs.compose.webview)
+        val commonMain by getting {
+            dependencies {
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material)
+                implementation(compose.materialIconsExtended)
+                implementation(compose.ui)
+                implementation(compose.material3)
+                implementation(compose.components.resources)
+                implementation(libs.compose.navigation)
+                implementation(libs.kodein.emoji)
+                implementation(libs.kodein.emoji.compose)
+                implementation(libs.compose.webview)
+            }
+        }
+        val desktopMain by getting {
+            dependencies {
+                implementation(compose.desktop.common)
+                implementation(compose.desktop.currentOs)
+            }
         }
     }
 }
@@ -58,7 +69,6 @@ android {
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
-    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
         applicationId = "com.gosunet.composebook"
