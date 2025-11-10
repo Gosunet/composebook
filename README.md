@@ -2,8 +2,6 @@
 ## Badges
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/:user)
-
 
 # Composebook 🪄
 
@@ -29,7 +27,6 @@ Clone the project
 
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
 
-
 ### Run your application on Android
 
 - Create an Android virtual device.
@@ -41,6 +38,10 @@ You can open the web application by running the `:composeApp:wasmJsBrowserDevelo
 - Launch Xcode in a separate window. The first time, you may also need to accept its license terms and allow it to perform some necessary initial tasks.
 - In the list of run configurations, select **iosApp** and click **Run**.
 - If you don't have an available iOS configuration in the list, add a new iOS simulated device.
+
+### Run your application on desktop
+
+- In the list of run configurations, select **composeApp** and click **Run**.
 
 ## Authors
 
