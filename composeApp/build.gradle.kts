@@ -13,13 +13,18 @@ kotlin {
             commonWebpackConfig {
                 outputFileName = "composeApp.js"
             }
+            testTask {
+                useKarma {
+                    useFirefox()
+                }
+            }
         }
         binaries.executable()
     }
 
     androidTarget {}
 
-    jvm("desktop")
+    jvm()
 
     listOf(
         iosX64(),
@@ -55,11 +60,24 @@ kotlin {
                 implementation(libs.compose.webview)
             }
         }
-        val desktopMain by getting {
+        val jvmMain by getting {
             dependencies {
                 implementation(compose.desktop.common)
                 implementation(compose.desktop.currentOs)
             }
+        }
+
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+
+                @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+                implementation(compose.uiTest)
+            }
+        }
+
+        jvmTest.dependencies {
+            implementation(compose.desktop.currentOs)
         }
     }
 }
