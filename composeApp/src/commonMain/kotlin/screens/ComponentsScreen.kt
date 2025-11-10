@@ -29,7 +29,7 @@ import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun Components() {
+fun ComponentsScreen() {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(minSize = 300.dp), // This creates the responsive multi-column layout
         horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -85,10 +85,6 @@ fun Components() {
             }
         }
         item {
-            // Because it's in a lazy grid, this WebView will now be properly disposed of when scrolled off-screen.
-            ConditionalWebView()
-        }
-        item {
             ComponentsBlock(
                 title = "Price Indicator",
                 description = "Behold the Oracle of Value, a mystical indicator that channels the ever-shifting tides of fortune. With a flicker of emerald green for rising prosperity or a flush of crimson for waning wealth, it grants seers a real-time glimpse into the unpredictable dance of the market's magic."
@@ -96,6 +92,10 @@ fun Components() {
                 // Your price indicator will also benefit from this virtualization.
                 RealtimePriceIndicator()
             }
+        }
+        item {
+            // Because it's in a lazy grid, this WebView will now be properly disposed of when scrolled off-screen.
+            ConditionalWebView()
         }
     }
 }

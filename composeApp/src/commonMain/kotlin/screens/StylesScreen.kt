@@ -16,7 +16,7 @@ import composebook.composeapp.generated.resources.colors
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun Styles() {
+fun StylesScreen() {
     Column(
         modifier = Modifier.padding(30.dp).verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(16.dp),

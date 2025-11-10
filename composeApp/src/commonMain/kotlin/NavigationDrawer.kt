@@ -12,12 +12,16 @@ import kotlinx.coroutines.Job
 import org.kodein.emoji.Emoji
 import org.kodein.emoji.activities.arts_crafts.ArtistPalette
 import org.kodein.emoji.compose.WithPlatformEmoji
+import org.kodein.emoji.objects.tool.Hammer
 import org.kodein.emoji.people_body.hand_fingers_open.WavingHand
 import org.kodein.emoji.travel_places.place_building.Bricks
 import org.kodein.emoji.travel_places.place_building.House
 
 @Composable
-fun NavigationDrawer(navController: NavController, close: () -> Job) {
+fun NavigationDrawer(
+    navController: NavController,
+    close: () -> Job
+) {
     ModalDrawerSheet {
         Text(
             "Compose Book",
@@ -78,6 +82,20 @@ fun NavigationDrawer(navController: NavController, close: () -> Job) {
             selected = false,
             onClick = {
                 navController.navigate(Screens.ABOUT.name)
+                close()
+            }
+        )
+        NavigationDrawerItem(
+            label = {
+                WithPlatformEmoji(
+                    "${Emoji.Hammer} About"
+                ) { text, inlineContent ->
+                    Text(text = text, inlineContent = inlineContent)
+                }
+            },
+            selected = false,
+            onClick = {
+                navController.navigate(Screens.SETTINGS.name)
                 close()
             }
         )

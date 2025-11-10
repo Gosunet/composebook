@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Home() {
+fun HomeScreen() {
     Column(
         modifier = Modifier.fillMaxSize().padding(30.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),

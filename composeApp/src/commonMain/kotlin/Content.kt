@@ -3,29 +3,37 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import screens.About
-import screens.Components
-import screens.Home
-import screens.Styles
+import screens.AboutScreen
+import screens.ComponentsScreen
+import screens.HomeScreen
+import screens.SettingsScreen
+import screens.StylesScreen
 
 @Composable
-fun Content(navController: NavHostController) {
+fun Content(
+    navController: NavHostController,
+    isDarkMode: Boolean,
+    toggleDarkMode: () -> Unit
+) {
     NavHost(
         navController = navController,
         startDestination = Screens.HOME.name,
         modifier = Modifier
     ) {
         composable(route = Screens.HOME.name) {
-            Home()
+            HomeScreen()
         }
         composable(route = Screens.STYLES.name) {
-            Styles()
+            StylesScreen()
         }
         composable(route = Screens.COMPONENTS.name) {
-            Components()
+            ComponentsScreen()
         }
         composable(route = Screens.ABOUT.name) {
-            About()
+            AboutScreen()
+        }
+        composable(route = Screens.SETTINGS.name) {
+            SettingsScreen(isDarkMode, toggleDarkMode)
         }
     }
 }
