@@ -17,6 +17,7 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-ui" }
 compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version = "2.9.1" }
 compose-webview = { module = "io.github.kevinnzou:compose-webview-multiplatform", version = "2.0.3"}
+viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.9.6" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -58,6 +58,7 @@ kotlin {
                 implementation(libs.kodein.emoji)
                 implementation(libs.kodein.emoji.compose)
                 implementation(libs.compose.webview)
+                implementation(libs.viewmodel)
             }
         }
         val jvmMain by getting {
