@@ -31,7 +31,9 @@ fun App(
     val close = { scope.launch { drawerState.close() } }
 
     remember { EmojiService.initialize() }
-    var useDarkTheme by remember { mutableStateOf(false) }
+
+    val isSystemInDarkTheme = isSystemInDarkTheme()
+    var useDarkTheme by remember { mutableStateOf(isSystemInDarkTheme) }
     val onThemeToggle: () -> Unit = { useDarkTheme = !useDarkTheme }
     val colorScheme = when {
         useDarkTheme -> darkColorScheme()

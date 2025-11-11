@@ -1,0 +1,5 @@
+<resources>
+    <string name="about_screen_description">We are a team of passionate individuals dedicated to creating amazing products.</string>
+    <string name="about_welcome">Welcome to Our Company !</string>
+    <string name="about_contact">Contact us at: info@company.com</string>
+</resources>

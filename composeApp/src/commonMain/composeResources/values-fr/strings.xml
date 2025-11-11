@@ -1,0 +1,6 @@
+<resources>
+    <!-- About Screen -->
+    <string name="about_screen_description">Nous sommes une équipe de passionnés dédiés à la création de produits d'exception.</string>
+    <string name="about_welcome">Bienvenue sur la page descriptive de notre entreprise !</string>
+    <string name="about_contact">Contact nous à info@company.com</string>
+</resources>
