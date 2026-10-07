@@ -1,13 +1,13 @@
 [versions]
-agp = "8.13.0"
-android-compileSdk = "36"
+agp = "9.3.1"
+android-compileSdk = "37"
 android-minSdk = "24"
 android-targetSdk = "36"
-androidx-activityCompose = "1.11.0"
-compose = "1.9.3"
-compose-ui = "1.9.4"
-kotlin = "2.2.21"
-kodein-emoji = "2.3.0"
+androidx-activityCompose = "1.13.0"
+compose = "1.12.1"
+compose-ui = "1.12.1"
+kotlin = "2.4.20"
+kodein-emoji = "2.5.0"
 
 [libraries]
 kodein-emoji = { module = "org.kodein.emoji:emoji-kt", version.ref = "kodein-emoji" }
@@ -15,13 +15,13 @@ kodein-emoji-compose = { module = "org.kodein.emoji:emoji-compose-m3", version.r
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-ui" }
-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version = "2.9.1" }
+compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version = "2.9.2" }
 compose-webview = { module = "io.github.kevinnzou:compose-webview-multiplatform", version = "2.0.3"}
-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.9.6" }
+viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.11.0" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
-androidLibrary = { id = "com.android.library", version.ref = "agp" }
+androidMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

@@ -30,7 +30,7 @@ You can open the web application by running the `:composeApp:wasmJsBrowserDevelo
 ### Run your application on Android
 
 - Create an Android virtual device.
-- In the list of run configurations, select **composeApp**.
+- In the list of run configurations, select **androidApp**.
 - Choose your Android virtual device and click **Run**.
 
 ### Run your application on iOS
@@ -57,4 +57,3 @@ Contributions are always welcome!
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
 [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
 [Kotlin/Wasm](https://kotl.in/wasm/)…
-
