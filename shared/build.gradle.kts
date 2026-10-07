@@ -7,20 +7,7 @@ plugins {
 
 kotlin {
     @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
-    wasmJs {
-        outputModuleName = "composeApp"
-        browser {
-            commonWebpackConfig {
-                outputFileName = "composeApp.js"
-            }
-            testTask {
-                useKarma {
-                    useFirefox()
-                }
-            }
-        }
-        binaries.executable()
-    }
+    wasmJs { browser() }
 
     android {
         namespace = "com.gosunet.composebook.shared"
@@ -39,7 +26,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "ComposeApp"
+            baseName = "Shared"
             isStatic = true
             freeCompilerArgs += "-Xbinary=bundleId=com.gosunet.composebook"
         }
@@ -60,11 +47,6 @@ kotlin {
             implementation(libs.compose.webview)
             implementation(libs.viewmodel)
         }
-        jvmMain.dependencies {
-            implementation(libs.compose.desktop)
-            implementation(compose.desktop.currentOs)
-        }
-
         commonTest.dependencies {
             implementation(kotlin("test"))
             implementation(libs.compose.ui.test)
@@ -73,11 +55,10 @@ kotlin {
         jvmTest.dependencies {
             implementation(compose.desktop.currentOs)
         }
+
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-    }
+compose.resources {
+    packageOfResClass = "com.gosunet.composebook.generated.resources"
 }

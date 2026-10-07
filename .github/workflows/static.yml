@@ -35,11 +35,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
       - name: Generate Site
-        run: ./gradlew wasmJsBrowserDistribution
+        run: ./gradlew :webApp:wasmJsBrowserDistribution
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v4
         with:
-          path: composeApp/build/dist/wasmJs/productionExecutable
+          path: webApp/build/dist/wasmJs/productionExecutable
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -11,8 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import composebook.composeapp.generated.resources.Res
-import composebook.composeapp.generated.resources.colors
+import com.gosunet.composebook.generated.resources.Res
+import com.gosunet.composebook.generated.resources.colors
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

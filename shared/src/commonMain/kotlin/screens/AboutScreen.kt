@@ -9,10 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
-import composebook.composeapp.generated.resources.Res
-import composebook.composeapp.generated.resources.about_contact
-import composebook.composeapp.generated.resources.about_screen_description
-import composebook.composeapp.generated.resources.about_welcome
+import com.gosunet.composebook.generated.resources.Res
+import com.gosunet.composebook.generated.resources.about_contact
+import com.gosunet.composebook.generated.resources.about_screen_description
+import com.gosunet.composebook.generated.resources.about_welcome
 
 @Composable
 fun AboutScreen() {
@@ -40,4 +40,3 @@ fun AboutScreen() {
         )
     }
 }
-

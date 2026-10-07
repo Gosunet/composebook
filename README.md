@@ -25,7 +25,13 @@ Clone the project
 
 ### Run your application on browser
 
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+You can open the web application by running:
+
+```shell
+./gradlew :webApp:wasmJsBrowserDevelopmentRun
+```
+
+Then open http://localhost:8080/ in your browser.
 
 ### Run your application on Android
 
@@ -41,7 +47,11 @@ You can open the web application by running the `:composeApp:wasmJsBrowserDevelo
 
 ### Run your application on desktop
 
-- In the list of run configurations, select **composeApp** and click **Run**.
+Run:
+
+```shell
+./gradlew :desktopApp:run
+```
 
 ## Authors
 

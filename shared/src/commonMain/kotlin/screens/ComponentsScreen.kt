@@ -22,9 +22,9 @@ import components.RealtimePriceIndicator
 import components.SliderMinimal
 import components.SwitchMinimal
 import components.SwitchWithIcon
-import composebook.composeapp.generated.resources.Res
-import composebook.composeapp.generated.resources.magic
-import composebook.composeapp.generated.resources.plus
+import com.gosunet.composebook.generated.resources.Res
+import com.gosunet.composebook.generated.resources.magic
+import com.gosunet.composebook.generated.resources.plus
 import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalLayoutApi::class)
