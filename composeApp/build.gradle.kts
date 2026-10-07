@@ -46,36 +46,28 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material)
-                implementation(compose.materialIconsExtended)
-                implementation(compose.ui)
-                implementation(compose.material3)
-                implementation(compose.components.resources)
-                implementation(libs.compose.navigation)
-                implementation(libs.kodein.emoji)
-                implementation(libs.kodein.emoji.compose)
-                implementation(libs.compose.webview)
-                implementation(libs.viewmodel)
-            }
+        commonMain.dependencies {
+            implementation(libs.compose.runtime)
+            implementation(libs.compose.foundation)
+            implementation(libs.compose.material)
+            implementation(libs.compose.material.icons.extended)
+            implementation(libs.compose.ui)
+            implementation(libs.compose.material3)
+            implementation(libs.compose.resources)
+            implementation(libs.compose.navigation)
+            implementation(libs.kodein.emoji)
+            implementation(libs.kodein.emoji.compose)
+            implementation(libs.compose.webview)
+            implementation(libs.viewmodel)
         }
-        val jvmMain by getting {
-            dependencies {
-                implementation(compose.desktop.common)
-                implementation(compose.desktop.currentOs)
-            }
+        jvmMain.dependencies {
+            implementation(libs.compose.desktop)
+            implementation(compose.desktop.currentOs)
         }
 
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-
-                @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-                implementation(compose.uiTest)
-            }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+            implementation(libs.compose.ui.test)
         }
 
         jvmTest.dependencies {
